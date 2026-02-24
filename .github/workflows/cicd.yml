@@ -13,8 +13,8 @@ jobs:
           version: 8.6.2
       - uses: actions/setup-node@v3
         with:
-          node-version: 22.X
-          cache:'npm'
+          node-version: 20.X
+          cache: 'npm'
       - run: npm install
       - run: npm run build
       - name: action-Deploy
