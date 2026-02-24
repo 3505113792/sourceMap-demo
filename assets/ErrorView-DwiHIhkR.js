@@ -1,0 +1,2 @@
+import{d as a,c as p,a as e,b as t,o as c,r as d}from"./index-aN0ykcfe.js";const E={class:"abouy"},v=a({__name:"ErrorView",setup(f){const s=()=>{TypeError.length>0&&console.log("err")},l=()=>{throw new ReferenceError("hello")},i=()=>{throw new SyntaxError("hello")};return(g,r)=>{const o=d("el-divider");return c(),p("div",E,[e("p",{onClick:r[0]||(r[0]=n=>s())},"触发TypeError"),t(o),e("p",{onClick:r[1]||(r[1]=n=>l())},"触发ReferenceError"),t(o),e("p",{onClick:r[2]||(r[2]=n=>i())},"触发SyntaxError")])}}});export{v as default};
+//# sourceMappingURL=ErrorView-DwiHIhkR.js.map
