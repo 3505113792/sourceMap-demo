@@ -1,5 +1,5 @@
 import axios from 'axios'
-import sourceMap from 'source-map-js'
+import { SourceMapConsumer } from 'source-map-js'
 const getSourceMap = async (url: string) => {
   return await axios.get(url)
 }
@@ -7,7 +7,7 @@ const getSourceMap = async (url: string) => {
 const findCodeBySourceMap = async (stackFrame: any) => {
   const sourceData: any = await getSourceMap(stackFrame.fileName + '.map')
   const fileContent = sourceData.data
-  const consumer = await new sourceMap.SourceMapConsumer(fileContent)
+  const consumer = await new SourceMapConsumer(fileContent)
   // 通过报错位置查找到对应的源文件名称以及报错行数
   const originalPosition = consumer.originalPositionFor({
     line: stackFrame.lineNumber,
